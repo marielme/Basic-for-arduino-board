@@ -5,6 +5,7 @@ This project try to bring a very basic support of Basic Language for Arduino Boa
 You can create your Basic file, with arduino extendended commands (abp, arduino basic program).
 
 To run "my_basic_program.abp", write in the command line of the terminal:
+
 🚀 >> python run_bas_in_arduino.py my_basic_program.abp
 
 At the repository, there is a example of a Basic program called "demo.abp"
@@ -14,11 +15,17 @@ Time to try 👩🏻‍💻 👨‍💻 👾 !!
 ## Commands Supported:
 
   HIGH pin_number
+
   LOW pin_number
+
   DEBUG text_to_show_at_terminal
+
   PAUSE pause_time_in_ms
+
   READPIN pin_number var_name = 'value'
+
   Loops:
+
     DO  
     | commands
     LOOP
@@ -30,7 +37,9 @@ Time to try 👩🏻‍💻 👨‍💻 👾 !!
 ### define variables:
 
   STRING var_name = 'value'
+
   INTEGER var_name = value
+
   BYTE var_name = value
 
 
@@ -41,7 +50,9 @@ install the dependencies:
 > pip install -r requirements.txt
 
   Python      https://www.python.org/downloads/
+
   textx       https://pypi.org/project/textX/
+
   pyfirmata   https://pypi.org/project/pyFirmata/
 
 ### MIT License
