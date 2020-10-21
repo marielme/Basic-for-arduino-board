@@ -1,0 +1,26 @@
+STRING demo = 'pepe'
+INTEGER status = 0
+PAUSE 1
+HIGH 10
+LOW 10
+DEBUG "hola"
+READPIN 12 status
+DO
+    FOR counter=1 TO 3
+        STRING pepe = "manolo"
+        DEBUG "Yellow"
+        HIGH 13
+        PAUSE 100
+        LOW 13
+    NEXT
+
+    FOR counter=1 TO 2
+        STRING pepe = "manolo"
+        DEBUG "Green"
+        HIGH 12
+        PAUSE 50
+        LOW 12
+    NEXT
+
+LOOP
+

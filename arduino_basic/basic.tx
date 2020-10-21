@@ -1,0 +1,22 @@
+Model: commands*=basicCommand;
+basicCommand: Var_Type | Loops | IO | System;
+// basicCommand: Var_Type | Condition | Loops | Math_operations | IO | System;
+IO: HIGH | LOW | READPIN;
+System: DEBUG | PAUSE;
+Loops: DO | FOR;
+Var_Type: var_INTEGER | var_BYTE | var_STRING | VAR; 
+VAR: var_name=ID 'VAR' "INT" | "BYTE" | "STRING" ;
+HIGH: 'HIGH' pin=INT;
+LOW: 'LOW' pin=INT;
+DEBUG: 'DEBUG' text=STRING;
+PAUSE: 'PAUSE' pause_time=INT;
+DO: 'DO' 
+    commands*=basicCommand
+    'LOOP';
+FOR: 'FOR' counter_name=ID '=' count_init=INT 'TO' count_final=INT 
+    commands*=basicCommand
+    'NEXT';
+var_INTEGER: "INTEGER" var_name=ID "=" var_value=INT;
+var_BYTE: "BYTE" var_name=ID "=" var_value=INT;
+var_STRING: "STRING" var_name=ID "=" var_value=STRING;
+READPIN: "READPIN" pin=INT var_name=ID;
