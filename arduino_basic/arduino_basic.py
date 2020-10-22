@@ -29,38 +29,38 @@ class ArBasProgram():
         self.arduino_board = Arduino_Board(arduino)
 
     def parse_code(self):
-    """
-    Parse the code.
+        """
+        Parse the code.
 
-    The code in Basic is parse, create AST graph object and it keeped in self.program.
-    """
+        The code in Basic is parse, create AST graph object and it keeped in self.program.
+        """
         self.program =  program_parser(self.code)
 
     def load_file(self, file_name=None):
-    """
-    Load the file with Basic code and call the method parse.
+        """
+        Load the file with Basic code and call the method parse.
 
-    The load Basic code is loaded at self.code and then parse it.
+        The load Basic code is loaded at self.code and then parse it.
 
-    Parameters
-    ----------
-    commands : list of commads
-       list of basic language commads
+        Parameters
+        ----------
+        commands : list of commads
+        list of basic language commads
 
-    """
+        """
         self.code = load_file(file_name)
         self.parse_code()
 
     def run(self, commands=None):
-    """
-    run each Basic command in the arduino or in computer terminal.
+        """
+        run each Basic command in the arduino or in computer terminal.
 
-    Parameters
-    ----------
-    commands : list of commads
-       list of basic language commads
+        Parameters
+        ----------
+        commands : list of commads
+        list of basic language commads
 
-    """
+        """
         if not commands:
             commands = self.program.commands
 
