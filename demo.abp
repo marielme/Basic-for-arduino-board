@@ -6,12 +6,13 @@ LOW 10
 DEBUG "hola"
 READPIN 12 status
 DO
-    FOR counter=1 TO 3
+    FOR counter=1 TO 4
         STRING pepe = "manolo"
         DEBUG "Yellow"
         HIGH 13
         PAUSE 100
         LOW 13
+        PAUSE 100
     NEXT
 
     FOR counter=1 TO 2
@@ -20,6 +21,7 @@ DO
         HIGH 12
         PAUSE 50
         LOW 12
+        PAUSE 50
     NEXT
 
 LOOP
