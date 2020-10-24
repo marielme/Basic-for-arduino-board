@@ -6,7 +6,8 @@ You can create your Basic file, with arduino extendended commands (abp, arduino 
 
 To run "my_basic_program.abp", write in the command line of the terminal:
 
-🚀 >> python run_bas_in_arduino.py my_basic_program.abp
+🚀 
+> python run_bas_in_arduino.py my_basic_program.abp
 
 At the repository, there is a example of a Basic program called "demo.abp"
 
